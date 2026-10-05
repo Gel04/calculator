@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="calculator">
         <div class="top controls">
-            <button onclick="showHistory">◷</button>
+            <button id="themeButton" onclick="toggleTheme()">
+                <img src="icons/light.svg" alt="Theme">
+            </button>
+            <button onclick="showHistory()">◷</button>
             <button onclick="deleteLast()">⌫</button>
         </div>
+
         <input type="text" id="display" readonly>
         <div class="buttons">
             <button class="action" onclick="clearDisplay()">C</button>
@@ -30,10 +35,10 @@
             <button onclick="displayValue('2')">2</button>
             <button onclick="displayValue('3')">3</button>
             <button class="action" onclick="displayValue('%')">%</button>
-            <button onclick="toggleSign('/')">+/-</button>
+            <button onclick="toggleSign()">+/-</button>
             <button onclick="displayValue('0')">0</button>
             <button class="action" onclick="displayValue('.')">.</button>
-            <button class="action" onclick="displayValue('=')">=</button>
+            <button class="action" onclick="calculate()">=</button>
         </div>
     </div>
 
